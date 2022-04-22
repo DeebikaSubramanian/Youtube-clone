@@ -1,0 +1,131 @@
+.selectvideo
+{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.selectvideo_closeIcon
+{
+cursor:pointer;
+margin-right:10px;
+}
+.selectvideo_dialog
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.selectvideo_publish
+{
+    
+    border-radius: 50%;
+    padding: 20px;
+    width:100px;
+height: 100px;
+align-items: center;
+display: flex;
+justify-content: center;
+}
+.selectvideo_publishIcon
+{
+    font-size:4rem !important;
+}
+.MuiDialog-paperWidthSm
+{
+    width:70vw;
+    height: 80vh;
+    max-width: unset !important;
+}
+.selectvideo_text
+{
+    text-align: center;
+    margin-top: 40px;
+}
+.selectvideo_subtitle
+{
+    color: grey;
+    font-size: 13px;
+    margin-top: 0px;
+}
+.selectvideo_props
+{
+    max-width: 700px;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+    color:grey;
+    line-height: 20px;
+}
+.file_input
+{
+    outline: none;
+}
+.file_input::-webkit-file-upload-button
+{
+    visibility: hidden;
+    outline: none;
+}
+.file_input::before
+{
+    margin-left: 70px;
+    margin-top: 20px;
+    content:"Select files";
+    display: inline-block;
+    background-color: blue;
+    border-radius: 3px;
+    padding:10px;
+    outline:none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-weight:500;
+    font-size: 14px;
+    font-family: "Roboto";
+    text-transform: uppercase;
+}
+.file_input:active{
+    outline: 0;
+}
+.add_thumbnail::before
+{
+    content:"Select thumbnail";
+    margin:0;
+}
+
+@media(width<=665px)
+{
+    .MuiDialog-paperWidthSm
+    {
+        width:80vw;
+    height: 90vh;
+    }
+.selectvideo_text
+{
+    text-align: center;
+    margin-top: 0px;
+}
+.selectvideo_subtitle
+{
+    color: grey;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.selectvideo_props
+{
+    max-width: 700px;
+    font-size: 10px;
+    color:grey;
+    line-height: 13px;
+    margin-top: 20px;
+}
+.file_input
+{
+margin-top:0px;
+}
+.selectvideo_publish
+{
+padding:5px;
+}
+}

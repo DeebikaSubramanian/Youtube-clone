@@ -1,0 +1,156 @@
+.login
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login_content
+{
+display: flex;
+flex-direction: column;
+align-items: center; 
+padding:30px;
+height :520px !important;
+width:540px !important;
+}
+
+.login_img
+{
+    width:100px;
+}
+.login_wrap
+{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.login_title
+{
+    font-size: 24px;
+    font-weight: 400;
+    margin-top:5px !important;
+}
+.login_subtitle
+{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 5px !important;
+}
+.login_form
+{
+    width: 300px;
+    display:flex;
+    flex-direction: column;
+    
+}
+.login_input
+{
+    margin-top : 20px !important;
+}
+.login_info
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    color:gray;
+    font-size:14px;
+    font-weight: 600 !important;
+    width: 500px !important;
+}
+
+.login_button_wrap
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 0;
+}
+.login_button{
+    font-weight: 800 !important;
+    text-transform: capitalize;
+}
+.login_button  :first-of-type{
+    padding-left:0;
+}
+
+.login__loading {
+    animation: a-s 500ms 500ms 1 forwards;
+    background-color: white;
+    height: 4px;
+    width: 114%;
+    overflow: hidden;
+    margin-top: 10px !important;
+    margin: -30px -10px 30px -10px;
+    position: relative;
+    opacity: 0;
+  }
+  
+  .login__loading::before {
+    animation: a-lb 20s 500ms linear forwards;
+    background-color: #3684eb;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transform: translateX(-300px);
+    width: 100%;
+  }
+  
+  @keyframes a-s {
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes a-lb {
+    0% {
+      transform: translateX(-300px);
+    }
+    5% {
+      transform: translateX(-240px);
+    }
+    15% {
+      transform: translateX(-30px);
+    }
+    25% {
+      transform: translateX(-30px);
+    }
+    30% {
+      transform: translateX(-20px);
+    }
+    45% {
+      transform: translateX(-20px);
+    }
+    50% {
+      transform: translateX(-15px);
+    }
+    65% {
+      transform: translateX(-15px);
+    }
+    70% {
+      transform: translateX(-10px);
+    }
+    95% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(-5px);
+    }
+  }
+  .login_fade
+  {
+    opacity:0.5
+  }
+  
+  @media(width<=665px)
+  {
+  .login_info
+{
+    font-size:14px;
+    font-weight: 600 !important;
+    width: 300px !important;
+    text-align: center; 
+    margin-top:10px;
+}
+
+  } 

@@ -1,24 +1,76 @@
-import logo from './logo.svg';
-import './App.css';
+import {React,useState} from "react";
+import Header from "./components/header/Header"
+import Sidebar from "./components/sidebar/Sidebar"
+import Home from "./components/home/Home"
+import Watch from "./components/watch/Watch"
+import Preview from "./components/preview/Preview"
+import Selectvideo from "./components/uploadvideo/Selectvideo";
+import {BrowserRouter,Route,Routes} from "react-router-dom"
+import Login from "./components/login/Login";
+import { useAppContext, Userprovider } from "./context/AppContext";
+import { VideocamSharp } from "@material-ui/icons";
 
+ 
 function App() {
+const {videos,appState,showUploadVideo}=useAppContext();
+const [sidebar,setSidebar]=useState(false);
+function sidebar_appear()
+{
+  console.log("function"+sidebar)
+  setSidebar(!sidebar);
+  // if(sidebar)
+  // {
+  //   <Sidebar/>
+  //   console.log(sidebar)
+  //     }
+}
+
+// const params=useParams();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+       <BrowserRouter>
+       {appState==="home"&& 
+    <div className="appjs">
+      
+{videos.map((e)=>
+{
+  console.log(e)
+return(
+  <><Routes>
+    <Route path={`/Watch/${e.id}`} element={<Header sidebar={sidebar_appear}/>} />
+  </Routes><Routes>
+      <Route path={`/Watch/${e.id}`} element={<Watch video={e}/>} />
+    </Routes></>
+)
+})}
+
+      <Selectvideo/> 
+     
+         <Routes>
+         <Route path='/' element={<Header/>}/>
+         </Routes>
+
+      <div className="sidehome">
+        <Routes>
+       <Route path='/' element={<><Sidebar/><Home/></>}/></Routes>
+       {showUploadVideo&&<Selectvideo/>}
+       </div>
+     
+      
+      <Routes>
+        <Route path='/preview' element={<Header/>}/>
+      </Routes>
+      <div className="appjs2 ">
+        <Routes> 
+      <Route path='/Preview' element={<><Sidebar preview_width={true} /><Preview/></>}/>
+      </Routes>
+       
+       </div>
+     
+      </div>
+}
+{appState==="login"&&<Login/>}
+      </BrowserRouter>
+   
   );
 }
 

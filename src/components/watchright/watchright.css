@@ -1,0 +1,61 @@
+.watchright
+{
+    display: flex;
+    width : 300px;
+    /* margin-top: 10px;
+    min-height: 90px;
+    max-height: 90px;
+    height: 90px; */
+    cursor: pointer;
+}
+
+.watchright_left
+{
+    margin-right:10px;
+}
+.watchright_thumbnail
+{
+    width: inherit;
+    height: 90px;
+}
+
+.watchright_right
+{
+    margin-top: 0px;
+}
+.watchright_title
+{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.watchright_img
+{
+    width: 150px;
+    height: 80px;
+}
+.title
+{
+    font-weight: 500;
+    font-size:18px;
+    letter-spacing: 0.01px;
+}
+.text
+{
+    margin-top: 5px !important;
+    align-self: bottom;
+}
+.text>p{
+    font-size: 13px !important;
+}
+.watchright_preview
+{
+flex-direction: column;
+width:220px;
+margin-top: 20px;
+}
+.watchright_preview_img
+{
+    width:150px !important;
+    height:150px !important;
+}
