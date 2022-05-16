@@ -43,8 +43,8 @@ function Header(props) {
         <Menu className="menuicon"
         onClick={props.sidebar}
         >
-        </Menu>
-        {/* {props.sidebar?<Sidebar/>:""} */}
+          </Menu><div>{props.sidebar}</div>
+         
         <img className="youtubelogo" src={youtubelogo1} alt="Youtube"></img>
         </div>
 
@@ -64,7 +64,7 @@ function Header(props) {
     <Apps className="headright_icon"/>
     <Notifications className="headright_icon"/>
     <Avatar onClick={AvatarClick} className="headright_icon"/>
-
+ 
     <Popover
           open={open}
           id={id}

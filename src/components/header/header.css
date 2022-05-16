@@ -4,7 +4,7 @@
     display:flex;
     align-items: center;
     justify-content: space-between;
-    padding:20px;
+    /* padding:10px; */
     position: sticky;
     top:0;
     background-color: white;
@@ -56,6 +56,12 @@
 {
     margin-right: 8px;
 }
+
+.sidebarFalse
+{
+    display:none
+}
+
 .MuiPopover-paper
 {
     max-height:calc(100vh - 62px-100px);

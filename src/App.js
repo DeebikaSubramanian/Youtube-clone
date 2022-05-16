@@ -5,27 +5,18 @@ import Home from "./components/home/Home"
 import Watch from "./components/watch/Watch"
 import Preview from "./components/preview/Preview"
 import Selectvideo from "./components/uploadvideo/Selectvideo";
-import {BrowserRouter,Route,Routes} from "react-router-dom"
+import {BrowserRouter,Route,Routes,useNavigate} from "react-router-dom"
 import Login from "./components/login/Login";
 import { useAppContext, Userprovider } from "./context/AppContext";
 import { VideocamSharp } from "@material-ui/icons";
 
  
 function App() {
+  
 const {videos,appState,showUploadVideo}=useAppContext();
 const [sidebar,setSidebar]=useState(false);
-function sidebar_appear()
-{
-  console.log("function"+sidebar)
-  setSidebar(!sidebar);
-  // if(sidebar)
-  // {
-  //   <Sidebar/>
-  //   console.log(sidebar)
-  //     }
-}
 
-// const params=useParams();
+
   return (
        <BrowserRouter>
        {appState==="home"&& 
@@ -36,7 +27,7 @@ function sidebar_appear()
   console.log(e)
 return(
   <><Routes>
-    <Route path={`/Watch/${e.id}`} element={<Header sidebar={sidebar_appear}/>} />
+    <Route path={`/Watch/${e.id}`} element={<Header/>} />
   </Routes><Routes>
       <Route path={`/Watch/${e.id}`} element={<Watch video={e}/>} />
     </Routes></>

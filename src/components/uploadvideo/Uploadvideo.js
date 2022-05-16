@@ -54,7 +54,7 @@ function handleVideoUpload()
   
 const uploadvideo=ref(storage,`image/${props.video.name}`);
 const uploadTask = uploadBytesResumable(uploadvideo,props.video,metadata);
-// console.log(uploadTask)
+
 uploadTask.on('state_changed', 
   (snapshot) => {
     const progresspercent = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
@@ -226,7 +226,7 @@ function uploadbtnOnclick()
  onChange={thumbnailOnUploaded}></input>
 
  <progress value={progress} max="100"/>
- {console.log(progress)}
+ {/* {console.log(progress)} */}
 
 <DialogActions>
   <Button variant="contained"

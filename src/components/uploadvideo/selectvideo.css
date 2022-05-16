@@ -73,6 +73,7 @@ justify-content: center;
     margin-top: 20px;
     content:"Select files";
     display: inline-block;
+    color: white;
     background-color: blue;
     border-radius: 3px;
     padding:10px;
@@ -91,6 +92,7 @@ justify-content: center;
 .add_thumbnail::before
 {
     content:"Select thumbnail";
+    color:white;
     margin:0;
 }
 

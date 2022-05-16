@@ -80,9 +80,9 @@ navigate(`/Preview`)
                        <p>10k</p>
                      </div>
                      
-                     <div className="watch_like_dislike">
+                     {/* <div className="watch_like_dislike">
                                         
-                                        </div>
+                                        </div> */}
                        <div className='watch_likebtn color--gray'>
                        <Reply className="watch_icon share_icon"/>
                        <p>SHARE</p>

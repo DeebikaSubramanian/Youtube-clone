@@ -27,7 +27,7 @@ function Thumb(props) {
       <div class="details">
         <Avatar onClick={avatarOnclick} />
         <div className="channel">
-          <h5 className='thumb_title'>{props.video.title}</h5>
+          <p className='thumb_title'>{props.video.title}</p>
           <div className='thumb_text_title'>
             <p className='thumb_text'>{props.video.channelName}<br/>
             100k views •{uploadedTime}</p>
