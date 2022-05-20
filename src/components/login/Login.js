@@ -119,6 +119,11 @@ signInWithEmailAndPassword(auth,email,password)
 </form>
 
             </div>
+            <div className="sample">
+    <p className="sample_credentials"><u>sample credentials:</u></p>
+    <p className="username">karthish@gmail.com</p>
+    <p className="password">12345678</p>
+</div>
         </div>
     }
     </div>

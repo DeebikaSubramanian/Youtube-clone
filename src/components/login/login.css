@@ -84,6 +84,12 @@ align-items: center;
     position: relative;
     opacity: 0;
   }
+
+  .sample
+  {
+    margin-top:10px;
+    text-align: left;
+  }
   
   .login__loading::before {
     animation: a-lb 20s 500ms linear forwards;
