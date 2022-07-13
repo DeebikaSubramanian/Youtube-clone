@@ -94,10 +94,10 @@ signInWithEmailAndPassword(auth,email,password)
     error={passwordError.state}
     helperText={passwordError.state?passwordError.msg:""}
     />
-<div className='login_info'>
+{/* <div className='login_info'>
     <p>Not your computer?Use guest mode to sign in privately?</p>
     <a href="/learnmore">Learn More</a>
-</div>
+</div> */}
     <div className="login_button_wrap">
         <Button
         className="login_button"
